@@ -24,9 +24,11 @@ const logIn = async (req, res) => {
      console.log(token);
 
     // We will generate cookie parser and match the token
-    res.cookie("LetsConnectweb" , token , {
-      expires : new Date(Date.now()+1000000),
-      httpOnly : true 
+    res.cookie('LetsConnectweb', token, {
+      expires: new Date(Date.now() + 1000000),
+      httpOnly: true,
+      SameSite: 'None',
+      secure: true,
     })
 
 
