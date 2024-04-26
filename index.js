@@ -11,7 +11,7 @@ dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["http://localhost:5001", "https://frontend-lets-shop.vercel.app"],
+    origin: ["https://frontend-lets-shop.vercel.app", "http://localhost:3000"],
     credentials: true }))
 app.use(cookieParser());
 
