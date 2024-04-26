@@ -10,7 +10,9 @@ import cookieParser from 'cookie-parser'
 dotenv.config()
 const app = express()
 app.use(express.json())
-app.use(cors({credentials:true,origin:'*'}))
+app.use(cors({
+    origin: ["http://localhost:5001", "https://frontend-lets-shop.vercel.app"],
+    credentials: true }))
 app.use(cookieParser());
 
 connectDB()
